@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
-import styles from "./RequestDemo.module.css";
+import styles from "./RequestDemo.module.css"
 import SelectedProductCard from "../SelectedProductCard/SelectedProductCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
