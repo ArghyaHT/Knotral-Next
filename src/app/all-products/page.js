@@ -1,4 +1,4 @@
-import AllProductsPage from "@/Pages/AllProducts/AllProductsPage";
+import AllProductsPage from "@/pages/AllProducts/AllProductsPage";
 import { client } from "@/utils/sanityClient";
 
 // ✅ Server-side SEO metadata

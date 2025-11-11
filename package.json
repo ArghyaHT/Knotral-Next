@@ -2,16 +2,16 @@
   "name": "knotral",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "dev": "next dev",
-  "build": "next build && next-on-netlify",
-    "start": "next start",
-    "lint": "eslint"
-  },
-  "engines": {
-  "node": "18.x"
+"scripts": {
+  "dev": "next dev",
+  "build": "next build",
+  "start": "next start"
 },
+  "engines": {
+    "node": "18.x"
+  },
   "dependencies": {
+    "@netlify/plugin-nextjs": "^5.14.5",
     "@portabletext/react": "^5.0.0",
     "@sanity/client": "^7.12.1",
     "next": "16.0.1",

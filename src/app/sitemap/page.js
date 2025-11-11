@@ -1,4 +1,4 @@
-import SiteMapPage from "@/Pages/SiteMap/SiteMapPage";
+import SiteMapPage from "@/pages/SiteMap/SiteMapPage";
 import { client } from "@/utils/sanityClient";
 
 export default async function Page() {
