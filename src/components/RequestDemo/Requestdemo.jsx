@@ -3,7 +3,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import styles from "./RequestDemo.module.css";
-import ProductCard from "../ProductCard/ProductCard";
 import SelectedProductCard from "../SelectedProductCard/SelectedProductCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
@@ -12,6 +11,7 @@ import { FaChevronDown } from "react-icons/fa";
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+
 
 const RequestDemo = ({ allProducts }) => {
   const router = useRouter();
