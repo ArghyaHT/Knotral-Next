@@ -1,0 +1,202 @@
+.contactContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 50px;
+  background-color: var(--primary-background-color);
+  margin-top: 40px;
+}
+
+.contactContent {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+/* Left: Image */
+.contactImageWrapper {
+  flex: 1;
+  max-width: 430px;
+  min-width: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contactImage {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.formSection {
+  padding-left: 30px;
+}
+
+.formHeading {
+  font-size: 40px;
+  font-weight: 400;
+  color: var(--primary-black);
+}
+
+.row {
+  display: flex;
+  gap: 16px;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+/* Inputs, textarea, select scoped */
+.formGroup input,
+.formGroup textarea,
+.formGroup select {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.formGroup label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.selectField {
+  color: var(--primary-grey);
+}
+
+.requiredTag {
+  color: var(--primary-black);
+  font-weight: 400;
+  padding-left: 2px;
+}
+
+.formGroup textarea {
+  resize: vertical;
+}
+
+.submitButton {
+  background-color: var(--knotral-red);
+  color: var(--primary-white);
+  padding: 15px;
+  text-transform: uppercase;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+}
+
+.submitButton:hover {
+  background-color: #d62800;
+}
+
+/* Tablet (≤ 768px) */
+@media (max-width: 768px) {
+  .contactContainer {
+    padding: 10px 0;
+    display: block;
+    background-color: var(--primary-background-color);
+  }
+  .contactContent {
+    flex-direction: column;
+  }
+  .contactImageWrapper {
+    display: none;
+  }
+  .formSection {
+    padding-left: 0px;
+    padding-bottom: 30px;
+  }
+  .formHeading {
+    font-size: 32px;
+    margin-bottom: 24px;
+  }
+  .row {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .formGroup input,
+  .formGroup textarea,
+  .formGroup select {
+    font-size: 15px;
+  }
+  .submitButton {
+    font-size: 15px;
+    padding: 10px;
+  }
+}
+
+/* Mobile (≤ 480px) */
+@media (max-width: 480px) {
+  .formHeading {
+    font-size: 26px;
+    text-align: center;
+  }
+  .contactContainer {
+    padding: 10px 12px;
+  }
+  .contactImage {
+    border-radius: 8px;
+  }
+  .formGroup input,
+  .formGroup textarea,
+  .formGroup select {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+  .submitButton {
+    font-size: 14px;
+    padding: 10px;
+    width: 100%;
+  }
+  .row {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .formGroup label {
+    font-size: 13px;
+  }
+  .requiredTag {
+    font-size: 12px;
+  }
+}
+
+/* Extra Small (≤ 360px) */
+@media (max-width: 360px) {
+  .formHeading {
+    font-size: 22px;
+  }
+  .formGroup input,
+  .formGroup textarea,
+  .formGroup select {
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+  .submitButton {
+    font-size: 13px;
+    padding: 9px;
+  }
+}

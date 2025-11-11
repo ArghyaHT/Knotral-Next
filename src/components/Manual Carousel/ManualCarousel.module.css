@@ -1,0 +1,17 @@
+.carouselWrapper {
+  overflow: hidden;
+  width: 100%;
+  margin-top: 16px;
+}
+
+.track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 9999px; /* just large enough */
+}
+
+.slide {
+  min-width: calc(100% / 3);
+  box-sizing: border-box;
+  padding: 0 8px;
+}

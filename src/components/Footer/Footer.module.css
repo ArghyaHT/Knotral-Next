@@ -1,0 +1,416 @@
+.footer {
+    padding: 10px 135px;
+    background-color: var(--knotral-blue);
+    text-align: start;
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+.imageSection {
+    /* Center image vertically */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.logoImage {
+    max-width: 300px;
+    height: auto;
+    margin-top: 20px;
+}
+
+.linksSection h4 {
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--primary-white);
+}
+
+.linksList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.linksList li {
+    margin-bottom: 10px;
+}
+
+.linksList li a {
+    color: var(--primary-white);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.linksList li a:hover {
+    color: #FE2E00;
+}
+
+.socialSection h4 {
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--primary-white);
+}
+
+.socialIcons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.socialIcons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.subscribeSection {
+    width: 100%;
+    max-width: 300px;
+    /* or whatever max width you want */
+    display: flex;
+    flex-direction: column;
+}
+
+.inputWrapper {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+}
+
+.icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: var(--primary-blue);
+    pointer-events: none;
+}
+
+.subscribeInput {
+    width: 100%;
+    padding: 10px 14px 10px 36px;
+    background-color: var(--knotral-blue);
+    /* 👈 space for the icon on the left */
+    font-size: 14px;
+    border-radius: 0 !important;
+    border: 1px solid #ccc;
+    font-family: inherit;
+    box-sizing: border-box;
+    color: var(--primary-white);
+}
+
+.subscribeInput::placeholder {
+    color: var(--primary-white);
+    /* Replace with your desired color */
+    opacity: 1;
+    /* Optional: ensures full visibility in some browsers */
+}
+
+.subscribeStatus {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #4caf50; /* or red for error */
+}
+
+.subscribeButton {
+    width: 100%;
+    /* 👈 Same as input */
+    background-color: var(--primary-white);
+    color: var(--primary-black);
+    padding: 10px 0px;
+    font-size: 14px;
+    font-weight: 900;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+}
+
+.copyRightText {
+    font-size: 14px;
+    color: var(--primary-white);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    /* Center the text */
+    font-weight: 500;
+}
+
+.companyInfo {
+    font-size: 14px;
+    color: var(--primary-white);
+    line-height: 16px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 30px;
+
+
+}
+
+.companyInfo a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+/* .iconCircle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  text-decoration: none;
+}
+
+.iconCircle:hover {
+  transform: scale(1.1);
+} */
+/* .socialIcons a:hover img {
+    filter: brightness(0) invert(0.5) sepia(1) saturate(5) hue-rotate(180deg);
+} */
+
+
+/* Tablet screens (≤768px) */
+@media (max-width: 768px) {
+  .footer {
+    padding: 10px 20px;
+    text-align: center;
+  }
+
+  .gridContainer {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 100%;
+    justify-items: center;
+  }
+
+  .imageSection {
+    justify-content: center;
+  }
+
+  .logoImage {
+    max-width: 250px;
+    margin-top: 10px;
+  }
+
+  .linksSection,
+  .socialSection {
+    text-align: center;
+  }
+
+  .linksSection h4,
+  .socialSection h4 {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .linksList {
+    padding: 0;
+  }
+
+  .linksList li {
+    margin-bottom: 8px;
+  }
+
+  .linksList li a {
+    font-size: 12px;
+  }
+
+  .socialIcons {
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .subscribeSection {
+    max-width: 260px;
+    margin: 20px auto 0;
+    align-items: center;
+  }
+
+  .subscribeInput {
+    font-size: 12px;
+    padding: 10px 14px 10px 36px;
+  }
+
+  .subscribeButton {
+    font-size: 12px;
+    margin-top: 12px;
+  }
+
+  .copyRightText,
+  .companyInfo {
+    font-size: 12px;
+    text-align: center;
+  }
+}
+
+
+/* Mobile screens (≤480px) */
+@media (max-width: 480px) {
+  .footer {
+    padding: 10px 15px;
+    text-align: center;
+  }
+
+  .gridContainer {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    justify-items: center;
+  }
+
+  .imageSection {
+    justify-content: center;
+  }
+
+  .logoImage {
+    max-width: 150px;
+    margin-top: 5px;
+  }
+
+  .linksSection,
+  .socialSection {
+    text-align: center;
+  }
+
+  .linksSection h4,
+  .socialSection h4 {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+
+  .linksList li {
+    margin-bottom: 6px;
+  }
+
+  .linksList li a {
+    font-size: 12px;
+  }
+
+  .socialIcons {
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+
+    .subscribeStatus {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 6px;
+    padding: 0 10px;
+  }
+
+  .subscribeSection {
+    max-width: 250px;
+    margin: 10px auto 0;
+    align-items: center;
+  }
+
+  .subscribeInput {
+    font-size: 11px;
+    padding: 8px 14px 8px 36px;
+  }
+
+  .subscribeButton {
+    font-size: 11px;
+    padding: 8px;
+    margin-top: 10px;
+  }
+
+  .copyRightText,
+  .companyInfo {
+    font-size: 11px;
+    text-align: center;
+  }
+}
+
+
+/* Extra Small Screens (≤360px) */
+@media (max-width: 360px) {
+  .footer {
+    padding: 10px 12px;
+    text-align: center;
+  }
+
+  .gridContainer {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    justify-items: center;
+  }
+
+  .logoImage {
+    max-width: 180px;
+    margin-top: 5px;
+  }
+
+  .linksSection,
+  .socialSection {
+    text-align: center;
+  }
+
+  .linksSection h4,
+  .socialSection h4 {
+    font-size: 11px;
+  }
+
+  .linksList li {
+    margin-bottom: 5px;
+  }
+
+  .linksList li a {
+    font-size: 10px;
+  }
+
+  .socialIcons {
+    justify-content: center;
+    gap: 6px;
+    margin-bottom: 6px;
+  }
+
+   .subscribeStatus {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 6px;
+    padding: 0 12px;
+    line-height: 1.4;
+  }
+
+  .subscribeSection {
+    max-width: 240px;
+    margin: 8px auto 0;
+    align-items: center;
+  }
+
+  .subscribeInput {
+    font-size: 10px;
+    padding: 6px 12px 6px 36px;
+  }
+
+  .subscribeButton {
+    font-size: 10px;
+    padding: 6px;
+    margin-top: 8px;
+  }
+
+  .copyRightText,
+  .companyInfo {
+    font-size: 10px;
+    text-align: center;
+  }
+}
+

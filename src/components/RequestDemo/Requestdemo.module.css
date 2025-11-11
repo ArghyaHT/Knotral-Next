@@ -1,0 +1,602 @@
+.requestDemo {
+  display: flex;
+  gap: 24px;
+  padding: 20px 40px;
+  background-color: var(--primary-white);
+}
+
+.leftSection {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.yourSelection {
+  background-color: var(--primary-white);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  line-height: 26px;
+  border: 1px solid var(--border-color);
+  border-radius: 0 0 10px 10px;
+}
+
+.header {
+  background-color: var(--primary-background-color);
+  padding:8px 20px;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.headerConatainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.dropdownIcon {
+  color: var(--request-demo-heading);
+  font-size: 24px;
+  display: none;
+}
+
+.sectionHeading {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--request-demo-heading);
+  margin: 0;
+}
+
+.productCount {
+  width: 32px;
+  /* Set width */
+  height: 32px;
+  /* Same height for a circle */
+  display: flex;
+  /* Center content horizontally */
+  align-items: center;
+  /* Center content vertically */
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--request-demo-heading);
+  border: 1px solid var(--request-demo-heading);
+  /* <-- border width, style and color */
+  border-radius: 50%;
+}
+
+.productList {
+  list-style-type: disc;
+  padding: 20px;
+  margin: 0;
+}
+
+.productListItem {
+  font-size: 18px;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.noProductsText {
+  font-size: 16px;
+  font-style: italic;
+  color: #888;
+}
+
+.youMayAlsoLike {
+  margin-top: 40px;
+  background-color: var(--primary-white);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  min-height: 300px;
+  line-height: 26px;
+  border: 1px solid var(--border-color);
+  border-radius: 0 0 10px 10px;
+  display: none;
+}
+
+/* .productList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.productListItem {
+  flex: 1 1 300px;
+} */
+
+.carouselWrapper {
+  margin: 0;
+  overflow: visible; /* let arrows show */
+  position: relative; /* for nav positioning */
+  height: 530px;
+}
+:global(.swiper-button-next),
+:global(.swiper-button-prev) {
+  font-family: swiper-icons;        /* still using Swiper’s icon font */
+  font-size: var(--swiper-navigation-size) !important;       /* custom size */
+  color: var(--primary-black) !important;         /* custom arrow color */
+  border-radius: 50%;
+  padding: 8px;
+}
+
+:global(.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet) {
+  width: 35px;
+  height: 2px;
+  border-radius: 2px;
+  background-color: #ccc;
+  opacity: 1;
+  margin: 0 6px !important;
+  transition: background-color 0.3s ease;
+  bottom: var(--swiper-pagination-bottom, 20px);
+}
+
+:global(.swiper-pagination-bullet-active) {
+  background-color: var(--primary-black) !important; /* or your desired color */
+  opacity: 1;
+}
+
+:global(.swiper-pagination) {
+    top: 495px !important;
+}
+
+.relatedproductList {
+  list-style-type: disc;
+  margin: 0;
+  max-width: 600px;
+
+}
+
+.relatedproductListItem {
+  width: 100%;
+  max-width: 400px;
+  /* You can tweak this */
+  box-sizing: border-box;
+  padding: 0px 10px ;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+
+.rightSection {
+  flex: 1;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.formSection {
+  padding: 0px 50px;
+}
+
+.formHeading {
+  font-size: 40px;
+  font-weight: 400;
+  color: var(--primary-black);
+  margin-top: 0px;
+  margin-bottom: 30px;
+  line-height: 46px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  width: 100%;
+}
+
+.formGroup {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.formGroup input,
+.formGroup textarea,
+.formGroup select {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.selectField {
+  color: var(--primary-grey);
+}
+
+.formGroup label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary-black);
+}
+
+.requiredTag {
+  color: var(--primary-black);
+  font-weight: 400;
+  padding-left: 2px;
+}
+
+.formGroup textarea {
+  resize: vertical;
+  min-height: 186px;
+}
+
+.checkboxWrapper {
+  display: flex;
+  align-items: flex-start;
+  /* center vertically */
+  justify-content: flex-start;
+  font-size: 14px;
+  line-height: 1.5;
+  cursor: pointer;
+  gap: 10px;
+  max-width: 100%;
+  margin: 20px 0px;
+}
+
+.checkboxWrapper input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+}
+
+.checkboxText {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.checkboxText a {
+  text-decoration: none;
+  color: var(--knotral-blue);
+  font-weight: 700;
+}
+
+.checkboxWrapper label {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  /* center vertically */
+  gap: 10px;
+}
+
+.readMoreButton {
+  background: none;
+  border: none;
+  color: var(--knotral-blue);
+  font-weight: 600;
+  font-size: 14px;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.submitButton {
+  background-color: var(--knotral-red);
+  color: var(--primary-white);
+  font-weight: bold;
+  padding: 12px;
+  text-transform: uppercase;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.submitButton:hover {
+  background-color: var(--knotral-red);
+}
+
+.checkboxError {
+  color: var(--knotral-red);
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.popupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 400px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.popupButton {
+  background-color: var(--knotral-red);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.popupButton:hover {
+  background-color: var(--knotral-red);
+}
+
+
+/* Extra extra small devices (phones, up to 360px) */
+@media (max-width: 360px) {
+  .requestDemo {
+    flex-direction: column;
+    padding: 8px 12px;
+    gap: 10px;
+  }
+
+  .leftSection,
+  .rightSection {
+    flex: unset;
+    width: 100%;
+  }
+
+.carouselWrapper {
+    height: 0px; /* or unset if you prefer */
+  }
+  .leftSection {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  .header {
+    padding: 0px 20px 0px 20px;
+  }
+
+  .formHeading {
+    display: none;
+  }
+
+  .yourSelection {
+    order: 1;
+  }
+
+  .youMayAlsoLike {
+    display: none;
+  }
+
+  .formSection {
+    padding: 10px 16px;
+  }
+/* 
+  .contactForm {
+    gap: 1px;
+  } */
+
+  .row {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .formGroup {
+    flex: unset;
+    width: 100%;
+    margin-bottom: 14px;
+  }
+
+  .formGroup input,
+  .formGroup textarea,
+  .formGroup select {
+    width: 100%;
+    font-size: 16px;
+  }
+
+ .formGroup textarea {
+  height: 80px;
+  min-height: 80px;
+  max-height: 80px;
+  /* resize: none; disables drag-to-resize on mobile */
+}
+
+ .checkboxWrapper{
+    margin: 0px;
+  }
+
+.checkboxWrapper input[type="checkbox"] {
+  width: 10px;
+  height: 10px;
+}
+
+  .submitButton {
+    width: 100%;
+    padding: 16px;
+  }
+}
+
+/* Extra small devices (phones, 361px to 480px) */
+@media (min-width: 361px) and (max-width: 480px) {
+  .requestDemo {
+    flex-direction: column;
+    padding: 10px 15px;
+    gap: 12px;
+  }
+
+  .leftSection,
+  .rightSection {
+    flex: unset;
+    width: 100%;
+  }
+
+  .carouselWrapper {
+    height: auto; /* or unset if you prefer */
+  }
+
+  .leftSection {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header {
+    padding: 0px 20px 0px 20px;
+  }
+
+  .dropdownIcon {
+    display: flex;
+    /* flex for centering */
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: var(--request-demo-heading);
+  }
+
+  .formHeading {
+    display: none;
+  }
+
+  .youMayAlsoLike {
+    display: none;
+  }
+
+
+  .formSection {
+    padding: 8px 12px;
+  }
+
+  /* .contactForm {
+    gap: 14px;
+  } */
+
+  .row {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .formGroup {
+    flex: unset;
+    width: 100%;
+    margin-bottom: 12px;
+  }
+
+  .formGroup input,
+  .formGroup textarea,
+  .formGroup select {
+    width: 100%;
+    font-size: 15px;
+  }
+
+.formGroup textarea {
+  height: 80px;
+  min-height: 80px;
+  max-height: 80px;
+  /* resize: none; disables drag-to-resize on mobile */
+}
+
+ .checkboxWrapper{
+    margin: 0px;
+  }
+
+.checkboxWrapper input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+}
+
+  .submitButton {
+    width: 100%;
+    padding: 14px;
+  }
+}
+
+/* Small devices (tablets, 481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .requestDemo {
+    flex-direction: column;
+    padding: 15px 25px;
+    gap: 16px;
+  }
+
+  .leftSection,
+  .rightSection {
+    flex: unset;
+    width: 100%;
+  }
+
+  .leftSection {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dropdownIcon {
+    display: flex;
+    /* flex for centering */
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: var(--request-demo-heading);
+  }
+
+  .formHeading {
+    font-size: 30px;
+  }
+
+  .youMayAlsoLike {
+    display: none;
+  }
+
+
+  .formSection {
+    padding: 15px 25px;
+  }
+
+  /* .contactForm {
+    gap: 18px;
+  } */
+
+  .row {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .formGroup {
+    flex: unset;
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  .formGroup input,
+  .formGroup textarea,
+  .formGroup select {
+    width: 100%;
+    font-size: 17px;
+  }
+  .checkboxWrapper{
+    margin: 0px;
+  }
+
+  .checkboxWrapper input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+}
+
+  .submitButton {
+    width: 100%;
+    padding: 18px;
+  }
+}

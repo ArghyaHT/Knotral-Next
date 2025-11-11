@@ -1,0 +1,684 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap');
+
+.products {
+  padding: 10px 40px;
+  background-color: var(--primary-white);
+  text-align: start;
+}
+
+.productsHeading {
+  font-size: 36px;
+  font-weight: 900;
+  color: var(--primary-black);
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.searchBarWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* center the container horizontally */
+  margin: 20px 0 40px;
+}
+
+.searchInputContainer {
+  position: relative;
+  width: 830px;
+  /* match input width */
+}
+
+.searchIcon {
+  position: absolute;
+  top: 50%;
+  left: 45px;
+  transform: translateY(-50%);
+  color: #888;
+  font-size: 18px;
+  pointer-events: none;
+  /* so click passes to input */
+}
+.searchInput {
+  width: 100%;
+  /* fill the container */
+  padding: 20px 75px;
+  /* left padding for icon */
+  font-size: 16px;
+  border-radius: 30px;
+  border: 1.5px solid #ccc;
+  text-transform: capitalize;
+  outline: none;
+  transition: border-color 0.3s ease;
+  font-family: 'Raleway', sans-serif;
+}
+
+.searchInput:focus {
+  border-color: #FE2E00;
+  box-shadow: 0 0 5px rgba(254, 46, 0, 0.5);
+}
+
+
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.carouselControls button {
+  padding: 8px 16px;
+  font-size: 14px;
+  color: var(--knotral-blue);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.carouselControls button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.carouselControls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+/* Highlight the active page number button */
+.carouselControls button.activePage {
+  background-color: transparent;
+  /* or any accent color */
+  color: var(--knotral-blue);
+  /* make text visible */
+  font-weight: bold;
+  cursor: default;
+  transform: scale(1.5);
+  /* scale up 10% */
+  transition: transform 0.2s ease;
+  /* smooth scaling */
+}
+
+.product {
+  position: relative;
+  /* width: 400px; */
+  height: 600px;
+  background-color: var(--primary-white);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.26);
+  text-align: left;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.productHeader {
+  /* Remove max-width and max-height to avoid clipping */
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  /* space between icon and texts */
+}
+.productIcon {
+  width: 70px;
+  /* adjust icon size as needed */
+  height: 70px;
+  object-fit: contain;
+  flex-shrink: 0;
+  /* prevents shrinking */
+}
+
+.productTitleWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: calc(100% - 70px - 16px);
+  /* prevent overflow (total width minus icon and gap) */
+}
+
+.productTitle {
+  /* Increase font size for readability */
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+  color: var(--primary-black);
+  white-space: normal;
+  line-height: 1.2;
+}
+
+.categoryTag {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 4px 0 0 0;
+  color: var(--primary-category);
+  /* example gold/yellow */
+}
+
+.productImageWrapper {
+  width: 100%;
+  height: auto;
+}
+
+.productImage {
+  width: 100%;
+  height: 200px;
+  /* adjust as needed */
+  object-fit: inherit;
+}
+
+.productContent {
+  width: 100%;
+  padding: 0px 16px;
+  border-radius: 16px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.productTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 12px 0;
+  justify-content: flex-start;
+  /* Optional: aligns tags to left */
+  margin-bottom: 0.5px;
+}
+
+.tag {
+  padding: 6px 6px;
+  background-color: var( --tag-background);
+  /* border: 1px solid var(--knotral-blue); */
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--knotral-blue);
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.descriptionWrapper {
+  margin-top: 0px;
+  height: 100px
+}
+
+.productDescription {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  /* Number of lines to show */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 14px;
+  color: var(--primary-black);
+  line-height: 20px;
+  margin-bottom: 0px;
+}
+
+.seeMoreLink {
+  display: inline-block;
+  margin-top: 4px;
+  font-size: 14px;
+  color: var(--knotral-red);
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.ctaWrapper {
+   position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  padding: 20px;
+}
+
+.ctaButton1 {
+  width: 140px;
+  height: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: var(--knotral-red);
+  color: var(--primary-white);
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buttonText{
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+  font-size: 12px;
+  padding-top: 2px;
+}
+
+.ctaButton {
+  width: 120px;
+  height: 30px;
+  display: flex;
+  border: 1px solid var(--knotral-blue);
+  background-color: transparent;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--knotral-blue);
+  border-radius: 100px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.productContent a {
+  text-decoration: none;
+}
+
+.ctaButton1:hover {
+  background-color: #d02600;
+}
+
+/* .checkbox {
+  accent-color: #FE2E00;
+  background-color: #FE2E00;
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+} */
+
+.checkboxWrapper {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Hide default checkbox */
+.checkbox {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+/* Custom checkbox look */
+.checkmark {
+  width: 10px;
+  height: 10px;
+  border-radius: 4px;
+  background-color: var;
+  border: 1px solid var(--primary-white);
+  display: inline-block;
+  position: relative;
+}
+
+/* On checked: fill background */
+.checkbox:checked + .checkmark {
+  border: 1px solid var(--primary-white);
+border-width: 2px 0 2px 2px;
+
+}
+
+/* Checkmark tick */
+.checkbox:checked + .checkmark::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: -2px;
+  width: 4px;
+  height: 8px;
+  border: 2px solid var(--primary-white);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  z-index: 9999;
+  background-color: transparent;
+}
+
+
+
+
+/* Responsive: Tablets, Mobiles, Extra Small Screens */
+@media (max-width: 768px) {
+  .products {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 100%;
+    overflow-x: hidden;
+    background-color: var(--primary-white);
+  }
+
+  .productsHeading {
+    font-size: 28px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .searchInputContainer {
+    width: 100%;
+    max-width: 00%;
+  }
+
+  .searchInput {
+    font-size: 14px;
+    padding: 12px 40px;
+    height: 20px;
+    width: 280px;
+  }
+
+  .searchIcon {
+    left: 30px;
+    font-size: 16px;
+  }
+
+  .productGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    padding: 0px 15px;
+  }
+
+  .product {
+    width: 100%;
+    max-width: 100%;
+    height: 500px;
+  }
+
+  .productTitle {
+    font-size: 18px;
+  }
+
+  .categoryTag {
+    font-size: 13px;
+  }
+
+  .productImage {
+    height: 160px;
+    width: 100%;
+    object-fit: inherit;
+  }
+
+  .productDescription {
+    font-size: 13px;
+    line-height: 18px;
+    -webkit-line-clamp: 4;
+  }
+
+  .seeMoreLink {
+    font-size: 13px;
+  }
+
+  .ctaWrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  .ctaButton {
+    width: 100%;
+    font-size: 12px;
+    padding: 10px;
+    height: auto;
+  }
+
+  .ctaButton1 {
+    width: 120px;
+    font-size: 12px;
+    height: 20px;
+    gap: 6px;
+    padding: 8px;
+  }
+
+  .checkbox {
+    width: 14px;
+    height: 14px;
+  }
+
+  .carouselControls button {
+    padding: 6px 10px;
+    font-size: 12px;
+    border-radius: 6px;
+  }
+
+  .carouselControls button.activePage {
+    transform: scale(1.2);
+  }
+
+  .searchBarWrapper {
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+  }
+
+  .searchInputContainer {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .product {
+    max-width: 100%;
+    max-height: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  }
+}
+
+
+@media (max-width: 480px) {
+  .products {
+    padding: 10px 12px;
+    margin: 0 auto;
+    overflow-x: hidden;
+  }
+
+  .productsHeading {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .productHeader{
+    padding: 5px 24px;
+  }
+
+  .searchInputContainer {
+    max-width: 90%; /* make it wider */
+  }
+
+  .searchInput {
+    width: 250px;
+    height: 20px;
+    font-size: 13px;
+  }
+
+  .searchIcon {
+    left: 20px;
+    font-size: 15px;
+  }
+
+  .productGrid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 0px 15px;
+
+  }
+
+  .product {
+    max-width: 100%;
+    width: 100%;
+    height: 500px;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .productImage {
+    height: 140px;
+    object-fit: inherit;
+    width: 100%;
+  }
+
+  .productTitle {
+    font-size: 16px;
+  }
+
+  .categoryTag {
+    font-size: 12px;
+  }
+
+  .productDescription {
+    font-size: 12px;
+    line-height: 18px;
+    -webkit-line-clamp: 3;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .seeMoreLink {
+    font-size: 13px;
+  }
+
+  .ctaWrapper {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 12px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .buttonText{
+    padding-top: 4px;
+  }
+
+  .ctaButton {
+    width: 100%;
+    font-size: 12px;
+    padding: 10px;
+    height: auto;
+  }
+
+  .ctaButton1 {
+    width: 120px;
+    height: 20px;
+    font-size: 12px;
+    gap: 6px;
+    padding: 8px 12px;
+  }
+
+  .checkbox {
+    width: 14px;
+    height: 14px;
+  }
+
+  .carouselControls button {
+    padding: 5px 8px;
+    font-size: 11px;
+    border-radius: 5px;
+  }
+
+  .carouselControls button.activePage {
+    transform: scale(1.1);
+  }
+
+  .searchBarWrapper {
+    width: 100%;
+    padding: 0 40px;
+    margin: 16px 0 30px;
+    box-sizing: border-box;
+    justify-content: center;
+  }
+
+  .searchInputContainer {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .product {
+    max-width: 100%;
+    max-height: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  }
+}
+
+@media (max-width: 360px) {
+  .productsHeading {
+    font-size: 20px;
+  }
+
+  .searchInput {
+    font-size: 12px;
+    padding: 10px 28px;
+  }
+
+  .searchIcon {
+    left: 16px;
+    font-size: 14px;
+  }
+
+  .productTitle {
+    font-size: 14px;
+  }
+
+  .categoryTag {
+    font-size: 11px;
+  }
+
+  .productImage {
+    height: 130px;
+    object-fit: inherit;
+  }
+
+  .productDescription {
+    font-size: 11px;
+    line-height: 16px;
+    -webkit-line-clamp: 2;
+  }
+
+  .seeMoreLink {
+    font-size: 12px;
+  }
+
+  .ctaButton,
+  .ctaButton1 {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .carouselControls button {
+    padding: 4px 6px;
+    font-size: 10px;
+    border-radius: 4px;
+  }
+
+  .carouselControls button.activePage {
+    transform: scale(1);
+  }
+}

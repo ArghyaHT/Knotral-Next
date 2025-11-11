@@ -1,0 +1,362 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  /* ensures it stays above other content */
+  padding: 10px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-background-color);
+}
+
+
+.logo {
+  width: 165px;
+  height: 60px;
+}
+
+.infoContainer {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 0;
+  /* or no margin */
+}
+
+.infoBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 10px;
+}
+
+.infoTitle {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  color: #000000;
+  gap: 8px;
+  /* spacing between icon and text */
+  font-size: 10px;
+}
+
+.icon {
+  font-size: 10px;
+  color: #000000;
+  /* updated to a more visible blue-black tone */
+  font-weight: bold;
+
+}
+
+.email {
+  color: #555;
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 5px;
+  text-decoration: none;
+}
+
+.feedbackBlock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feedbackButton {
+  background-color: var(--knotral-red);
+  color: white;
+  padding: 10px 20px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+}
+
+.feedbackButton:hover {
+  background-color: var(--knotral-red); /* darker shade for hover */
+}
+
+.feedbackOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.feedbackModal {
+  background: #fff;
+  padding: 20px 40px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.modalTitle {
+  font-size: 20px;
+  text-align: center;
+  margin-top: 0px;
+}
+
+.feedbackForm {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.feedbackForm label {
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  gap: 10px
+}
+
+.feedbackForm input,
+.feedbackForm select,
+.feedbackForm textarea {
+  padding: 4px 8px;        /* smaller padding */
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 13px;             /* Slightly smaller font */
+  font-family: inherit;
+  width: 100%;
+  line-height: 1.2;            /* Compact line height */
+}
+
+.radio {
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.radio label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.radio input[type="radio"] {
+  accent-color: var(--knotral-red, #e63946);
+}
+
+.radio input[type="radio"]:checked + span {
+  font-weight: 600;
+  color: var(--primary-black, #222);
+}
+
+.radio label:hover {
+  background-color: #f5f5f5;
+  border-color: var(--primary-black, #222);
+}
+
+
+.feedbackForm textarea {
+  min-height: 65px;
+}
+
+.modalButtons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.cancelButton,
+.submitButton {
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.cancelButton {
+  background-color: #ccc;
+  color: #333;
+}
+
+.submitButton {
+  background-color: var(--knotral-red);
+  color: white;
+}
+
+.experienceScale {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+.experienceButton {
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  min-width: 32px;
+  text-align: center;
+  user-select: none;
+  transition: background-color 0.2s ease, color 0.2s ease, border 0.2s ease;
+}
+
+.experienceButtonSelected {
+  background-color: var(--knotral-red);
+  color: var(--primary-white);
+  border: 2px solid var(--knotral-red);
+}
+
+
+
+
+/* Tablet (768px and below) */
+@media (max-width: 768px) {
+  .header {
+     position: sticky;
+  top: 0;
+  z-index: 999;
+    flex-direction: row;
+    /* explicitly keep row */
+    padding: 20px;
+  }
+
+  .logo {
+    width: 132px;
+    height: 48px;
+  }
+
+  .infoContainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: flex-end;
+  }
+  .infoBlock{
+    display: none;
+  }
+
+  .infoTitle {
+    font-size: 12px;
+  }
+
+  .icon {
+    font-size: 12px;
+  }
+
+  .email {
+    font-size: 14px;
+  }
+}
+
+/* Mobile (480px and below, e.g. iPhone 12) */
+@media (max-width: 480px) {
+  .header {
+     position: sticky;
+  top: 0;
+  z-index: 999;
+    flex-direction: row;
+    padding: 16px;
+  }
+
+  .logo {
+    width: 115px;
+    height: 42px;
+  }
+
+  .infoTitle {
+    font-size: 11px;
+  }
+
+  .icon {
+    font-size: 11px;
+  }
+
+  .email {
+    font-size: 13px;
+  }
+}
+
+/* Extra Small Devices (360px and below) */
+@media (max-width: 360px) {
+  .logo {
+    width: 100px;
+    height: 36px;
+  }
+
+  .infoTitle {
+    font-size: 10px;
+  }
+
+  .icon {
+    font-size: 10px;
+  }
+
+  .email {
+    font-size: 12px;
+  }
+
+  .infoContainer {
+    gap: 12px;
+  }
+
+
+    .feedbackModal {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    padding: 24px 16px;
+    box-shadow: none;
+    overflow-y: auto;
+  }
+
+  .modalTitle {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .feedbackForm {
+    gap: 12px;
+  }
+
+  .feedbackForm input,
+  .feedbackForm select,
+  .feedbackForm textarea {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
+  .experienceButton {
+    padding: 6px 10px;
+    min-width: 28px;
+    font-size: 13px;
+  }
+
+  .modalButtons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .submitButton,
+  .cancelButton {
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+  }
+}

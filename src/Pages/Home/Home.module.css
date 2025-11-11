@@ -1,0 +1,113 @@
+.stickyBar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #79808A;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
+  box-sizing: border-box;
+}
+
+.pendingDesc {
+  padding-left: 10px; /* removed huge 340px */
+  color: var(--primary-white);
+  font-size: 18px;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.buttonContainer {
+  padding: 6px 12px;
+  background-color: var(--knotral-red);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.stickyBarButton {
+  background: none;
+  color: white;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1.2;
+}
+
+.pendingCount {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #FE2E00;
+  border-radius: 8px;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  box-sizing: border-box;
+  margin-right: 8px;
+}
+
+.arrow {
+  margin-left: 6px;
+  font-size: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .stickyBar {
+    width: 100%;
+    padding: 6px 12px;
+  }
+
+  .pendingDesc {
+    font-size: 14px;
+  }
+
+  .stickyBarButton {
+    font-size: 14px;
+  }
+
+  .pendingCount {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+  }
+
+  .arrow {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .stickyBar {
+    padding: 4px 10px;
+  }
+
+  .pendingDesc {
+    font-size: 12px;
+  }
+
+  .stickyBarButton {
+    font-size: 12px;
+  }
+
+  .pendingCount {
+    width: 24px;
+    height: 24px;
+    font-size: 11px;
+  }
+
+  .arrow {
+    font-size: 12px;
+  }
+}

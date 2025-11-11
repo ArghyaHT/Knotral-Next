@@ -1,66 +1,51 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import { client } from "@/utils/sanityClient";
+import Home from "@/Pages/Home/Home";
 
-export default function Home() {
-  return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.js file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
-  );
+// ✅ Server-side SEO metadata
+export async function generateMetadata() {
+  try {
+    // Fetch some product data from Sanity (adjust query fields if needed)
+    const products = await client.fetch(`
+     *[_type == "product"]{
+  productName,
+  metaTitle,
+  metaDescription
+}
+    `);
+
+    // Combine product meta info for SEO
+    const metaTitle =
+      products.map(p => p.metaTitle || p.productName).join(" | ") ||
+      "Knotral — Global Education Solutions";
+
+    const metaDescription =
+      products.map(p => p.metaDescription).filter(Boolean).join(" ") ||
+      "Explore world-class educational and technology solutions with Knotral.";
+
+    return {
+      title: "Knotral",
+      description: metaDescription,
+      openGraph: {
+        title: metaTitle,
+        description: metaDescription,
+        url: "https://knotral.com",
+        siteName: "Knotral",
+        type: "website",
+      },
+      alternates: {
+        canonical: "https://knotral.com",
+      },
+    };
+  } catch (error) {
+    console.error("Metadata fetch failed:", error);
+    return {
+      title: "Knotral — Global Education Solutions",
+      description: "Explore world-class educational and technology solutions.",
+    };
+  }
+}
+
+// ✅ Render Home client component
+export default function Page() {
+  return <Home />;
 }

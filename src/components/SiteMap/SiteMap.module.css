@@ -1,0 +1,44 @@
+.container {
+  padding: 40px 60px; /* more space around */
+  max-width: 900px;   /* optional: keep it readable */
+  margin: 0 auto;     /* center the sitemap */
+}
+.title {
+  font-size: 24px;
+  margin-bottom: 16px;
+  color: #222;
+}
+
+.list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.item {
+  margin-bottom: 8px;
+}
+
+.link {
+  text-decoration: none;
+  color: #007bff;
+  transition: color 0.2s ease-in-out;
+}
+
+.link:hover {
+  color: #0056b3;
+}
+
+.heading {
+  font-weight: bold;
+  color: #444;
+}
+
+.sublist {
+  margin: 6px 0 0 20px; /* indent */
+  padding: 0;
+}
+
+.subitem {
+  margin-bottom: 6px;
+}

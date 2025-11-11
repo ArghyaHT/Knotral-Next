@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://knotral.com/sitemap.xml
+Sitemap: https://knotral.com/sitemap
+LLMs: https://knotral.com/llms.txt

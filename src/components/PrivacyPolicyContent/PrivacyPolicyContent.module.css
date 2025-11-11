@@ -1,0 +1,91 @@
+.privacyContainer {
+  padding: 60px 24px;
+  max-width: 960px;
+  margin: 0 auto;
+  line-height: 1.8;
+  color: #333;
+  background-color: #ffffff;
+}
+
+.privacyContainer h1 {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  color: #111;
+  text-align: center;
+}
+
+.privacyContainer h2 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-top: 40px;
+  margin-bottom: 12px;
+  color: #222;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 6px;
+}
+
+.privacyContainer p:nth-of-type(1),
+.privacyContainer p:nth-of-type(2) {
+  margin: 0;
+}
+
+.privacyContainer p {
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.privacyContainer ul {
+  padding-left: 24px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+.privacyContainer li {
+  font-size: 16px;
+  margin-bottom: 10px;
+  list-style-type: disc;
+}
+
+.privacyContainer a {
+  color: #0073e6;
+  text-decoration: none;
+}
+
+.privacyContainer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .privacyContainer {
+    padding: 40px 16px;
+  }
+
+  .privacyContainer h1 {
+    font-size: 28px;
+  }
+
+  .privacyContainer h2 {
+    font-size: 20px;
+  }
+
+  .privacyContainer p,
+  .privacyContainer li {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .privacyContainer {
+    padding: 30px 12px;
+  }
+
+  .privacyContainer h1 {
+    font-size: 24px;
+  }
+
+  .privacyContainer h2 {
+    font-size: 18px;
+  }
+}
