@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import styles from "./ContactUs.module.css";
-import styles1 from "../RequestDemo/RequestDemo.module.css"; // adjust path if needed
+import styles1 from "@/components/RequestDemo/RequestDemo.module.css";
 import { client } from "../../utils/sanityClient";
 import contactImage from "../../assets/contactImage.png";
 import { useRouter } from "next/navigation";
