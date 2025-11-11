@@ -3,10 +3,10 @@
 import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation"; // ✅ App router hook
 import Header from "@/components/Header/Header";
-import Requestdemo from "@/components/RequestDemo/Requestdemo";
 import Footer from "@/components/Footer/Footer";
+import RequestDemo from "@/components/RequestDemo/RequestDemo";
 
-const RequestDemo = () => {
+const RequestDemoPage = () => {
   const [products, setProducts] = useState([]);
   const searchParams = useSearchParams();
 
@@ -28,10 +28,10 @@ const RequestDemo = () => {
   return (
     <div>
       <Header />
-      <Requestdemo products={products} />
+      <RequestDemo products={products} />
       <Footer />
     </div>
   );
 };
 
-export default RequestDemo;
+export default RequestDemoPage;
