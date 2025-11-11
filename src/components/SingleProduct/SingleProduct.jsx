@@ -12,7 +12,7 @@ import Link from "next/link"; // ✅ Replaced react-router-dom Link
 import { Autoplay, Grid, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { client } from "../../utils/sanityClient";
-import styles1 from "../RequestDemo/Requestdemo.module.css"; // adjust path if needed
+import styles1 from "../RequestDemo/RequestDemo.module.css"; // adjust path if needed
 import defaultImage from "../../assets/defaultImage.webp"
 import { useParams, useRouter } from "next/navigation";
 
