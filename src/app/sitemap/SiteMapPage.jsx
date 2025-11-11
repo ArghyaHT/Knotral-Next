@@ -1,6 +1,7 @@
-import Header from "../../components/Header/Header";
-import Footer from "../../components/Footer/Footer";
-import SiteMap from "../../components/SiteMap/SiteMap";
+
+import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
+import SiteMap from "@/components/SiteMap/SiteMap";
 
 const SiteMapPage = ({ productSlugs }) => {
   return (

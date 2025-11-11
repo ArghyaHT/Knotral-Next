@@ -3,7 +3,7 @@
   bottom: 0;
   width: 100%;
   background-color: #79808A;
-  padding: 10px 20px;
+  padding: 1px 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -12,7 +12,7 @@
 }
 
 .pendingDesc {
-  padding-left: 10px; /* removed huge 340px */
+  padding-left: 40px; /* removed huge 340px */
   color: var(--primary-white);
   font-size: 18px;
   flex: 1;

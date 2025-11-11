@@ -1,5 +1,5 @@
 // app/[slug]/page.js
-import SingleProductPage from "@/pages/Single-Product-Page/SingleProductPage";
+import SingleProductPage from "@/app/[slug]/SingleProductPage";
 import { client } from "@/utils/sanityClient";
 
 export default async function Page({ params }) {

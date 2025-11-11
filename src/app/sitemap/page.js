@@ -1,5 +1,5 @@
-import SiteMapPage from "@/pages/SiteMap/SiteMapPage";
 import { client } from "@/utils/sanityClient";
+import SiteMapPage from "./SiteMapPage";
 
 export default async function Page() {
   // Fetch all product slugs server-side
@@ -10,6 +10,6 @@ export default async function Page() {
     }`
   );
 
-  
+
   return <SiteMapPage productSlugs={productSlugs} />;
 }

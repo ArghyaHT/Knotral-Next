@@ -1,5 +1,5 @@
 import { client } from "@/utils/sanityClient";
-import Home from "@/pages/Home/Home";
+import Home from "@/app/Home";
 
 // ✅ Server-side SEO metadata
 export async function generateMetadata() {

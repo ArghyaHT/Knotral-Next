@@ -2,10 +2,11 @@
 import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 
-import Header from "../../components/Header/Header";
-import Footer from "../../components/Footer/Footer";
-import AllProducts from "../../components/AllProducts/Allproducts";
-import styles from "../Home/Home.module.css";
+
+import styles from "../Home.module.css";
+import Header from "@/components/Header/Header";
+import AllProducts from "@/components/AllProducts/Allproducts";
+import Footer from "@/components/Footer/Footer";
 
 
 
@@ -45,8 +46,10 @@ const AllProductsPage = ({ products }) => {
   // ✅ Navigate with query params (Next.js doesn’t support state like React Router)
   const handleClick = () => {
     const encodedProducts = encodeURIComponent(JSON.stringify(selectedProducts));
-    router.push(`/request-demo?products=${encodedProducts}`);
-  };
+  router.push(
+      `/request-demo
+      `
+    );  };
 
   return (
     <div>
