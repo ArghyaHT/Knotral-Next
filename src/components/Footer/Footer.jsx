@@ -58,10 +58,8 @@ const Footer = () => {
                 {/* Part 1: Image */}
                 <div className={styles.imageSection}>
                     <Link href="/">
-                        <Image
+                        <img
                             src="/assets/KnotralFooter.png"
-                            width={200}
-                            height={100}
                             alt="Company Logo"
                             className={styles.logoImage}
                         />

@@ -64,8 +64,6 @@ const Header = () => {
           src="/knotral.png"
           alt="Logo"
           className={styles.logo}
-          width={132}
-          height={60}
         />
       </Link>
 

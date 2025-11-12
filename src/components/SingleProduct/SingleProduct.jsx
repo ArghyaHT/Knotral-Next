@@ -692,10 +692,8 @@ const SingleProduct = ({ slug }) => {
                     {Array.isArray(product.reviews) && product.reviews.length > 0 ? (
                         product.reviews.map((review, index) => (
                             <div key={index} className={styles.reviewCard}>
-                                <Image
+                                <img
                                     src={review.reviewProfileImage || "/assets/defaultImage.webp"}
-                                    width={200}
-                                    height={100}
                                     alt={review.name || "Reviewer"}
                                     className={styles.reviewImage} />
                                 <div className={styles.reviewContent}>

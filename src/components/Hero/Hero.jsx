@@ -17,7 +17,7 @@ const Hero = ({ onContactClick }) => {
       </button>
       </div>
       <div className={styles.right}>
-        <Image src={heroImage} alt="Hero" className={styles.image} />
+        <img src="/assets/bannerImage.jpg" alt="Hero" className={styles.image} />
       </div>
     </section>
   );

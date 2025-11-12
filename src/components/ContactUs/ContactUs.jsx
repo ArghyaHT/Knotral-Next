@@ -113,10 +113,8 @@ const ContactUs = () => {
       <div className={styles.contactContent}>
         {/* Left: Image */}
         <div className={styles.contactImageWrapper}>
-          <Image
+          <img
             src="/assets/contactImage.png"
-            width={300}
-            height={300}
             alt="Contact"
             className={styles.contactImage}
           />
