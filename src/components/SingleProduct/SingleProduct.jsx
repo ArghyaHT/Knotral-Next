@@ -50,21 +50,15 @@ const useIsMobile = (breakpoint = 480) => {
 };
 
 
-const SingleProduct = ({ slug }) => {
+const SingleProduct = ({ product, slug }) => {
     const router = useRouter();
-    const params = useParams();
-
-    // ✅ Get slug from props OR from the URL params
-    const productSlug = slug || params.slug;
-
-    console.log("Product slug:", productSlug);
 
     const isMobile = useIsMobile();
 
+    console.log("product in single product", product)
+
 
     // ✅ All states declared at the top
-    const [product, setProduct] = useState(null);
-
     const [showDemoPopup, setShowDemoPopup] = useState(false);
     const [loading, setLoading] = useState(true); // ✅ Loader state
     const [alternateProducts, setAlternateProducts] = useState([]);
@@ -84,74 +78,12 @@ const SingleProduct = ({ slug }) => {
         role: "",
         productName: "",
     });
-
+    
     useEffect(() => {
-        if (router.query?.product) {
-            // If product info passed via query
-            setProduct(JSON.parse(router.query.product));
-        }
-    }, [router.query]);
-
-    // ✅ Fetch product if opened via shared link
-    useEffect(() => {
-        if (!product && slug) {
-            client
-                .fetch(
-                    `*[_type == "product" && slug.current == $slug][0]{
-            _id,
-            productName,
-            "productLogo": productLogo.asset->url,
-            "featuredImage": featuredImage.asset->url,
-            "galleryImages": galleryImages[].asset->url,
-            heading,
-            slug,
-            shortDescription,
-            longDescription,
-            companyType,
-            tags,
-            companyName,
-            hqLocation,
-            founded,
-            age,
-            grade,
-            features,
-            perfectFor,
-            awards,
-            language,
-            training,
-            support,
-            price,
-            currency,
-            productFor,
-            trialType,
-            subscriptionType,
-            aboutHeading,
-            aboutDescription,
-            reviews[]{
-              reviewerName,
-              reviewText,
-              "reviewProfileImage": reviewProfileImage.asset->url
-            },
-              productFaqs[]{
-          question,
-          answer,
-        },
-      metaTitle,
-      metaDescription,
-      schemaMarkup
-          }`,
-                    { slug }
-                )
-                .then((data) => setProduct(data))
-                .catch(console.error)
-                .finally(() => setLoading(false)); // ✅ stop loader
-
-        }
-        else {
-            setLoading(false); // if product already passed via state
-        }
-    }, [slug, product]);
-
+  if (product) {
+    setLoading(false);
+  }
+}, [product]);
     // ✅ Fetch alternate products
     useEffect(() => {
         if (!product?.companyType) return;
@@ -274,8 +206,8 @@ const SingleProduct = ({ slug }) => {
 
     if (!product) return <p>No product found</p>;
 
-    const title = product?.metaTitle || product?.productName || "Knotral";
-    const paragraphs = product.longDescription?.split(/\n{2,}/) || [];
+    const title = product.metaTitle || product.productName || "Knotral";
+    const paragraphs = product.longDescription.split(/\n{2,}/) || [];
     const visibleParagraphs = isExpanded ? paragraphs : paragraphs.slice(0, 3);
 
     const aboutParagraphs = product.aboutDescription?.split(/\n{2,}/) || [];
