@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../Hero/Hero.module.css"
-import heroImage from "../../assets/bannerImage.jpg"
+import heroImage from "../../../public/assets/bannerImage.jpg"
 import Image from "next/image";
 
 

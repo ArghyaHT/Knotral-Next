@@ -4,7 +4,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "./Header.module.css";
 import Image from "next/image";
-import logo from "../../assets/knotral.png";
+import logo from "../../../public/assets/knotral.png";
 import { useRouter } from "next/navigation"; // ✅ Next.js router
 import { FaEnvelope } from "react-icons/fa";
 import { FaPhoneVolume } from "react-icons/fa6";

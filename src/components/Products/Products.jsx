@@ -3,15 +3,11 @@
 import React, { useState, useEffect } from "react";
 import styles from "./Products.module.css";
 import { client } from "../../utils/sanityClient"; 
-import productImage from "../../assets/productImage.png"
-import productLogo from "../../assets/productLogo.png"
 import { FaSearch } from "react-icons/fa";
 import Link from "next/link"; 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import ProductCard from "../ProductCard/ProductCard";
-import feature1 from "../../assets/feature1.jpeg"
-import feature2 from "../../assets/feature2.jpeg"
 
 const Products = ({ selectedProducts, onToggleSelect }) => {
   const [products, setProducts] = useState([]);
