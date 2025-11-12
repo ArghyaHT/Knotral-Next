@@ -60,9 +60,13 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <Link href="/"> {/* ✅ Next.js Link uses href, not to */}
-        <Image src="/knotral.png"alt="Logo" className={styles.logo} 
-         width={132}
-         height={60} />
+        <img
+          src="/knotral.png"
+          alt="Logo"
+          className={styles.logo}
+          width={132}
+          height={60}
+        />
       </Link>
 
       <div className={styles.infoContainer}>
@@ -97,7 +101,7 @@ const Header = () => {
               <label>
                 How would you rate your overall experience with the website?
                 <div className={styles.experienceScale}>
-                  {[1,2,3,4,5,6,7,8,9,10].map((num) => {
+                  {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((num) => {
                     const isSelected = formData.experience >= num;
                     return (
                       <button
@@ -151,7 +155,7 @@ const Header = () => {
               )}
 
               <label>
-                Were you able to find what you were looking for? 
+                Were you able to find what you were looking for?
                 <textarea
                   name="confusing"
                   value={formData.confusing}
@@ -160,7 +164,7 @@ const Header = () => {
               </label>
 
               <label>
-                 Any other comments regarding specific products/website.
+                Any other comments regarding specific products/website.
                 <textarea
                   name="comments"
                   value={formData.comments}
