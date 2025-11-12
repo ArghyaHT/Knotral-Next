@@ -1,6 +1,8 @@
 // app/[slug]/page.js
 import SingleProductPage from "@/app/[slug]/SingleProductPage";
 import { client } from "@/utils/sanityClient";
+import { notFound } from "next/navigation"; // ✅ import this
+
 
 export default async function Page({ params }) {
   // params may be a Promise, so unwrap it
@@ -56,7 +58,7 @@ export default async function Page({ params }) {
     { slug }
   );
 
-  if (!product) return <p>Product not found.</p>;
+  if (!product) return notFound();
 
   return <SingleProductPage product={product} slug={slug}/>;
 }

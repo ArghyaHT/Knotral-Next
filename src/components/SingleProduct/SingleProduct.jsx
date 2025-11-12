@@ -55,9 +55,6 @@ const SingleProduct = ({ product, slug }) => {
 
     const isMobile = useIsMobile();
 
-    console.log("product in single product", product)
-
-
     // ✅ All states declared at the top
     const [showDemoPopup, setShowDemoPopup] = useState(false);
     const [loading, setLoading] = useState(true); // ✅ Loader state
@@ -78,7 +75,7 @@ const SingleProduct = ({ product, slug }) => {
         role: "",
         productName: "",
     });
-    
+
     useEffect(() => {
   if (product) {
     setLoading(false);
