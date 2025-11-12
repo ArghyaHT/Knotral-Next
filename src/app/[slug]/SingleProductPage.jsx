@@ -3,7 +3,7 @@ import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import SingleProduct from "../../components/SingleProduct/SingleProduct";
 
-const SingleProductPage = ({ slug }) => {
+const SingleProductPage = ({product, slug }) => {
   console.log("SingleProduct Page slug:", slug);
 
   return (

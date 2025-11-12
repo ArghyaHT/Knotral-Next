@@ -58,5 +58,5 @@ export default async function Page({ params }) {
 
   if (!product) return <p>Product not found.</p>;
 
-  return <SingleProductPage slug={slug}/>;
+  return <SingleProductPage product={product} slug={slug}/>;
 }
