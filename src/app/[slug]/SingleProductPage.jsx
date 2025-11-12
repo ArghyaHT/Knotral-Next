@@ -1,4 +1,3 @@
-"use client"; // ✅ Make this a client component
 
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
