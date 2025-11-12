@@ -6,14 +6,13 @@ import { FaAward, FaChalkboardTeacher, FaCheck, FaChevronDown, FaGraduationCap, 
 import { MdBusiness, MdChecklist, MdSupportAgent, MdTranslate } from "react-icons/md";
 import { BiCategory } from "react-icons/bi";
 import { RiTranslate } from "react-icons/ri";
-import productLogo from "../../assets/productLogo.png"
 // import { useLocation, useNavigate, useParams } from "react-router-dom";
 import Link from "next/link"; // ✅ Replaced react-router-dom Link
 import { Autoplay, Grid, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { client } from "../../utils/sanityClient";
 import styles1 from "../RequestDemo/RequestDemo.module.css";
-import defaultImage from "../../assets/defaultImage.webp"
+import defaultImage from "../../../public/assets/defaultImage.webp"
 import { useParams, useRouter } from "next/navigation";
 
 
