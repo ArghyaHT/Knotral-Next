@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation"; // ✅ App router hook
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
-import RequestDemo from "@/components/RequestDemo/RequestDemo";
+import RequestDemo from "@/components/RequestDemo/RequestDemo.jsx";
 
 const RequestDemoPage = () => {
   const [products, setProducts] = useState([]);
