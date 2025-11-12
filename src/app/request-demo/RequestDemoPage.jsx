@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation"; // ✅ App router hook
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
-import RequestDemo from "@/components/RequestDemo/RequestDemo";
+import Requestdemo from "@/components/Requestdemo/Requestdemo";
 
 const RequestDemoPage = () => {
   const [products, setProducts] = useState([]);
@@ -28,7 +28,7 @@ const RequestDemoPage = () => {
   return (
     <div>
       <Header />
-      <RequestDemo allProducts={products} />
+      <Requestdemo allProducts={products} />
       <Footer />
     </div>
   );
