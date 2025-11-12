@@ -51,13 +51,13 @@ const useIsMobile = (breakpoint = 480) => {
 
 
 const SingleProduct = ({ slug }) => {
-  const router = useRouter();
-  const params = useParams();
+    const router = useRouter();
+    const params = useParams();
 
-  // ✅ Get slug from props OR from the URL params
-  const productSlug = slug || params.slug;
+    // ✅ Get slug from props OR from the URL params
+    const productSlug = slug || params.slug;
 
-  console.log("Product slug:", productSlug);
+    console.log("Product slug:", productSlug);
 
     const isMobile = useIsMobile();
 
@@ -85,12 +85,12 @@ const SingleProduct = ({ slug }) => {
         productName: "",
     });
 
-   useEffect(() => {
-    if (router.query?.product) {
-      // If product info passed via query
-      setProduct(JSON.parse(router.query.product));
-    }
-  }, [router.query]);
+    useEffect(() => {
+        if (router.query?.product) {
+            // If product info passed via query
+            setProduct(JSON.parse(router.query.product));
+        }
+    }, [router.query]);
 
     // ✅ Fetch product if opened via shared link
     useEffect(() => {
@@ -285,41 +285,41 @@ const SingleProduct = ({ slug }) => {
 
     return (
         <div className={styles.singleProduct}>
-              {product && (
-        <Head key={product.slug?.current}>
-          <title>{product.metaTitle || product.productName}</title>
-          {product.metaDescription && (
-            <meta name="description" content={product.metaDescription} />
-          )}
-          <link
-            rel="canonical"
-            href={`https://knotral.com/${product.slug?.current}`}
-          />
-          <meta property="og:type" content="website" />
-          <meta property="og:title" content={product.metaTitle || product.productName} />
-          {product.metaDescription && (
-            <meta property="og:description" content={product.metaDescription} />
-          )}
-          {product.featuredImage && (
-            <meta property="og:image" content={product.featuredImage} />
-          )}
-          <meta
-            property="og:url"
-            content={`contact@knotral.com/${product.slug?.current}`}
-          />
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta
-            name="twitter:title"
-            content={product.metaTitle || product.productName}
-          />
-          {product.metaDescription && (
-            <meta name="twitter:description" content={product.metaDescription} />
-          )}
-          {product.featuredImage && (
-            <meta name="twitter:image" content={product.featuredImage} />
-          )}
-        </Head>
-      )}
+            {product && (
+                <Head key={product.slug?.current}>
+                    <title>{product.metaTitle || product.productName}</title>
+                    {product.metaDescription && (
+                        <meta name="description" content={product.metaDescription} />
+                    )}
+                    <link
+                        rel="canonical"
+                        href={`https://knotral.com/${product.slug?.current}`}
+                    />
+                    <meta property="og:type" content="website" />
+                    <meta property="og:title" content={product.metaTitle || product.productName} />
+                    {product.metaDescription && (
+                        <meta property="og:description" content={product.metaDescription} />
+                    )}
+                    {product.featuredImage && (
+                        <meta property="og:image" content={product.featuredImage} />
+                    )}
+                    <meta
+                        property="og:url"
+                        content={`contact@knotral.com/${product.slug?.current}`}
+                    />
+                    <meta name="twitter:card" content="summary_large_image" />
+                    <meta
+                        name="twitter:title"
+                        content={product.metaTitle || product.productName}
+                    />
+                    {product.metaDescription && (
+                        <meta name="twitter:description" content={product.metaDescription} />
+                    )}
+                    {product.featuredImage && (
+                        <meta name="twitter:image" content={product.featuredImage} />
+                    )}
+                </Head>
+            )}
             {/* Breadcrumb */}
             <nav className={styles.breadcrumb}>
                 <Link href="/" className={styles.breadcrumbLink} >Home</Link>
@@ -694,6 +694,8 @@ const SingleProduct = ({ slug }) => {
                             <div key={index} className={styles.reviewCard}>
                                 <Image
                                     src={review.reviewProfileImage || "/assets/defaultImage.webp"}
+                                    width={200}
+                                    height={100}
                                     alt={review.name || "Reviewer"}
                                     className={styles.reviewImage} />
                                 <div className={styles.reviewContent}>

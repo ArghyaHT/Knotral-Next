@@ -115,6 +115,8 @@ const ContactUs = () => {
         <div className={styles.contactImageWrapper}>
           <Image
             src="/assets/contactImage.png"
+            width={300}
+            height={300}
             alt="Contact"
             className={styles.contactImage}
           />

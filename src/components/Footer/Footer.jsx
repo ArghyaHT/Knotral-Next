@@ -60,6 +60,8 @@ const Footer = () => {
                     <Link href="/">
                         <Image
                             src="/assets/KnotralFooter.png"
+                            width={200}
+                            height={100}
                             alt="Company Logo"
                             className={styles.logoImage}
                         />

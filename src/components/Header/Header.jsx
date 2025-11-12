@@ -60,7 +60,8 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <Link href="/"> {/* ✅ Next.js Link uses href, not to */}
-        <Image src="/assets/knotral.png"alt="Logo" className={styles.logo} />
+        <Image src="/assets/knotral.png"alt="Logo" className={styles.logo}  width={200}
+      height={100} />
       </Link>
 
       <div className={styles.infoContainer}>
