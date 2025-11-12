@@ -4,7 +4,7 @@
 import React from "react";
 import Image from "next/image";
 import styles from "./Footer.module.css"
-import footerImage from "../../../public/assets/KnotralFooter.png"
+// import footerImage from "../../../public/assets/KnotralFooter.png"
 import { FaFacebookF, FaInstagram, FaYoutube, FaLinkedinIn, FaEnvelope } from "react-icons/fa";
 import { SocialIcon } from "react-social-icons";
 import { client } from "../../utils/sanityClient";
@@ -59,7 +59,7 @@ const Footer = () => {
                 <div className={styles.imageSection}>
                     <Link href="/">
                         <Image
-                            src={footerImage}
+                            src="/assets/KnotralFooter.png"
                             alt="Company Logo"
                             className={styles.logoImage}
                         />

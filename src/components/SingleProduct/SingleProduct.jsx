@@ -12,7 +12,7 @@ import { Autoplay, Grid, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { client } from "../../utils/sanityClient";
 import styles1 from "../RequestDemo/RequestDemo.module.css";
-import defaultImage from "../../../public/assets/defaultImage.webp"
+// import defaultImage from "/assets/defaultImage.webp"
 import { useParams, useRouter } from "next/navigation";
 
 
@@ -693,7 +693,7 @@ const SingleProduct = ({ slug }) => {
                         product.reviews.map((review, index) => (
                             <div key={index} className={styles.reviewCard}>
                                 <Image
-                                    src={review.reviewProfileImage || defaultImage}
+                                    src={review.reviewProfileImage || "/assets/defaultImage.webp"}
                                     alt={review.name || "Reviewer"}
                                     className={styles.reviewImage} />
                                 <div className={styles.reviewContent}>

@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "./ContactUs.module.css";
 import styles1 from "../RequestDemo/RequestDemo.module.css";
 import { client } from "../../utils/sanityClient";
-import contactImage from "../../../public/assets/contactImage.png";
+// import contactImage from "../../../public/assets/contactImage.png";
 import { useRouter } from "next/navigation";
 
 const ContactUs = () => {
@@ -114,7 +114,7 @@ const ContactUs = () => {
         {/* Left: Image */}
         <div className={styles.contactImageWrapper}>
           <Image
-            src={contactImage}
+            src="/assets/contactImage.png"
             alt="Contact"
             className={styles.contactImage}
           />

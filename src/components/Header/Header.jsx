@@ -4,7 +4,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "./Header.module.css";
 import Image from "next/image";
-import logo from "../../../public/assets/knotral.png";
+// import logo from "/assets/knotral.png";
 import { useRouter } from "next/navigation"; // ✅ Next.js router
 import { FaEnvelope } from "react-icons/fa";
 import { FaPhoneVolume } from "react-icons/fa6";
@@ -60,7 +60,7 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <Link href="/"> {/* ✅ Next.js Link uses href, not to */}
-        <Image src={logo} alt="Logo" className={styles.logo} />
+        <Image src="/assets/knotral.png"alt="Logo" className={styles.logo} />
       </Link>
 
       <div className={styles.infoContainer}>
