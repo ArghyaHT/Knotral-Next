@@ -28,7 +28,7 @@ const RequestDemoPage = () => {
   return (
     <div>
       <Header />
-      <RequestDemo products={products} />
+      <RequestDemo allProducts={products} />
       <Footer />
     </div>
   );
