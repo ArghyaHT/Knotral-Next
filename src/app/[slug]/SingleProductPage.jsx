@@ -4,7 +4,7 @@ import Footer from "../../components/Footer/Footer";
 import SingleProduct from "../../components/SingleProduct/SingleProduct";
 
 const SingleProductPage = ({product, slug }) => {
-  console.log("SingleProduct Page slug:", slug);
+  console.log("SingleProduct Page slug:", product);
 
   return (
     <div>
