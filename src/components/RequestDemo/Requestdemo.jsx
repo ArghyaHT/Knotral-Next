@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
-import styles from "./Requestdemo.module.css"
+import styles from "./RequestDemo.module.css"
 import SelectedProductCard from "../SelectedProductCard/SelectedProductCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
@@ -13,7 +13,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 
-const Requestdemo = ({ allProducts }) => {
+const RequestDemo = ({ allProducts }) => {
   const router = useRouter();
   const swiperRef = useRef(null);
 
@@ -300,4 +300,4 @@ const Requestdemo = ({ allProducts }) => {
   );
 };
 
-export default Requestdemo;
+export default RequestDemo;
