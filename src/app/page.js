@@ -14,12 +14,9 @@ export async function generateMetadata() {
     `);
 
     // Combine product meta info for SEO
-    const metaTitle =
-      products.map(p => p.metaTitle || p.productName).join(" | ") ||
-      "Knotral — Global Education Solutions";
+    const metaTitle = "Knotral"
 
     const metaDescription =
-      products.map(p => p.metaDescription).filter(Boolean).join(" ") ||
       "Explore world-class educational and technology solutions with Knotral.";
 
     return {
