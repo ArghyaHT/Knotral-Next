@@ -14,7 +14,7 @@
     "@netlify/plugin-nextjs": "^5.14.5",
     "@portabletext/react": "^5.0.0",
     "@sanity/client": "^7.12.1",
-    "next": "16.0.0",
+    "next": "16.0.2",
     "next-seo": "^7.0.1",
     "next-sitemap": "^4.2.3",
     "react": "19.2.0",
