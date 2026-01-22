@@ -59,7 +59,7 @@ const Footer = () => {
                 <div className={styles.imageSection}>
                     <Link href="/">
                         <img
-                            src="/assets/KnotralFooter.png"
+                            src="/assets/KnotralFooterLogo.png"
                             alt="Company Logo"
                             className={styles.logoImage}
                         />
@@ -107,7 +107,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className={styles.copyRightText}>
-                &copy; 2025 Knotral. All Rights Reserved.
+                &copy; 2026 Knotral. All Rights Reserved.
             </div>
 
             <div className={styles.companyInfo}>
